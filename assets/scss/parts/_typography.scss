@@ -2,9 +2,47 @@
 
 h1 {
   font-size: 30px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+.special-heading {
+  color: $secondary;
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  margin-bottom: 30px;
+
+  &:after,
+  &:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 50px;
+    border-bottom: 2px solid $secondary;
+  }
+
+  &:before {
+    margin-right: 20px;
+  }
+
+  &:after {
+    margin-left: 20px;
+  }
 }
 
 // OTHER 
+
+p {
+  font-size: 14px;
+}
 
 a {
   color: $dark;
