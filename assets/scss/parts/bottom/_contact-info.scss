@@ -1,0 +1,101 @@
+.contact-info {
+
+  @media (max-width: 768px) {
+    width: 50% !important;
+  }
+
+  @media (max-width: 580px) {
+    width: 100% !important;
+    padding-left: 0 !important;
+  }
+
+  .logo {
+    display: inline-block;
+    height: 50px;
+    background-image: $logo;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 30px;
+  }
+
+  a {
+    position: relative;
+    width: fit-content;
+    margin-bottom: 10px;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 15px;
+      width: 15px;
+      padding-right: 10px;
+      transition: filter 0.2s;
+      filter: grayscale(1);
+    }
+
+    &.phone:before {
+      background-image: $phone;
+    }
+
+    &.mail:before {
+      background-image: $mail;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 0;
+      background: $accent;
+      left: 0;
+      top: 25px;
+      transition: width 0.2s ease-in-out;
+    }
+
+    &:hover {
+      color: $accent;
+
+      &:before {
+        filter: grayscale(0);
+      }
+
+      &:after {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 580px) {
+      &:last-child {
+        margin-left: 20px;
+      }
+    }
+
+    @media (max-width: 425px) {
+      &:last-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 580px) {
+      flex-direction: row;
+    }
+
+    @media (max-width: 425px) {
+      flex-direction: column;
+    }
+  }
+
+  .company {
+    border-top: 1px solid $lghtgray;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+}

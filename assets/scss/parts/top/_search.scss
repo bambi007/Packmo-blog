@@ -1,0 +1,34 @@
+.search {
+  display: flex;
+  flex-direction: row;
+  width: 350px;
+  border-bottom: 2px solid $lghtgray;
+  transition: border-bottom 0.2s;
+
+  &:focus-within {
+    border-bottom: 2px solid #EAAA01;
+  }
+
+  @media (max-width: 1024px) {
+    margin-top: 20px;
+  }
+
+  @media (max-width: 580px) {
+    width: 100%;
+  }
+
+  input[type=text] {
+    padding: 10px;
+    height: 35px;
+    width: calc(100% - 30px);
+  }
+
+  input[type=button] {
+    height: 35px;
+    width: 35px;
+
+    background-image: $mag-glass;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}

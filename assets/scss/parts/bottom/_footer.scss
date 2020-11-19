@@ -1,0 +1,18 @@
+@import "bottom-menu";
+@import "contact-info";
+@import "copyright";
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .container {
+
+    @media (max-width: 580px) {
+      flex-direction: column;
+    }
+  }
+
+}

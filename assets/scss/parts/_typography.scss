@@ -1,0 +1,39 @@
+// HEADINGS 
+
+h1 {
+  font-size: 30px;
+}
+
+// OTHER 
+
+a {
+  color: $dark;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.emphasis {
+  color: $accent;
+  font-weight: 700;
+}
+
+::placeholder {
+  color: $medgray;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+
+}
+
+input[type=text] {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: $dark;
+}
+
+input[type=button] {
+  font-family: "Poppins", sans-serif;
+
+  cursor: pointer;
+  font-size: 16px;
+
+}

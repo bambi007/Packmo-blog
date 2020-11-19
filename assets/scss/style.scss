@@ -1,0 +1,59 @@
+@import "parts/elements";
+@import "parts/typography.scss/";
+
+@import "parts/top/header";
+@import "parts/newsletter";
+@import "parts/bottom/footer";
+@import "parts/content/content";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  background: none;
+  list-style: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: $dark;
+  font-weight: 300;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.container {
+  display: flex;
+  width: 1400px;
+  margin: 0px auto;
+  padding: 20px;
+  justify-content: space-between;
+
+  @media (max-width: 1400px) {
+    width: 100%;
+  }
+}
+
+.sidebar {
+  width: 350px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  // background: darkcyan;
+}
+
+.main {
+  width: calc(100% - 350px);
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  // background: teal;
+}

@@ -1,0 +1,33 @@
+@import "menu";
+@import "search";
+@import "socialmedia";
+@import "burger";
+
+header {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .container {
+    align-items: center;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    @media (max-width: 580px) {
+      align-items: flex-start;
+    }
+  }
+
+  .logo {
+    cursor: pointer;
+    width: 200px;
+
+    svg {
+      width: 100%;
+    }
+  }
+}
