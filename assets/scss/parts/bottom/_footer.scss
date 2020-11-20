@@ -7,8 +7,26 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -4;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    background: $lghtgray;
+
+    @media (max-width: 580px) {
+      width: 100%;
+    }
+  }
 
   .container {
+
+    padding: 0;
 
     @media (max-width: 580px) {
       flex-direction: column;

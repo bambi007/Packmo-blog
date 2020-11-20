@@ -1,8 +1,10 @@
 .bottom-menu {
-  border-right: 1px solid $lghtgray;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row !important;
+  padding: 20px;
+  background: $bright;
+
 
   @media (max-width: 768px) {
     width: 50% !important;
@@ -10,11 +12,10 @@
 
   @media (max-width: 580px) {
     width: 100% !important;
-    border: none;
   }
 
   .links {
-    width: 25%;
+    width: calc(100% / 4);
     padding-right: 20px;
     margin-bottom: 20px;
 
