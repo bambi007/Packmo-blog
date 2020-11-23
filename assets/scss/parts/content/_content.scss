@@ -1,3 +1,11 @@
 @import "main";
 @import "sidebar";
 @import "tiles";
+
+.content {
+  .container {
+    @media (max-width: 1024px) {
+      flex-direction: column;
+    }
+  }
+}

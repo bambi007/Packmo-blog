@@ -1,17 +1,21 @@
 .bottom-menu {
+  width: calc(100% - 370px);
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row !important;
+  flex-direction: row;
   padding: 20px;
   background: $bright;
 
+  @media (max-width: 1024px) {
+    width: calc((100% / 3) * 2);
+  }
 
   @media (max-width: 768px) {
-    width: 50% !important;
+    width: 50%;
   }
 
   @media (max-width: 580px) {
-    width: 100% !important;
+    width: 100%;
   }
 
   .links {

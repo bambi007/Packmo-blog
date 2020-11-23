@@ -1,0 +1,115 @@
+.sidebar {
+  width: 350px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  @media (max-width: 1024px) {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 0;
+  }
+
+  .sidebar-part {
+    margin-bottom: 30px;
+  }
+
+  h3 {
+    margin-bottom: 20px;
+  }
+
+  .articles-quantity {
+    margin-right: 10px;
+    color: $medgray;
+    font-size: 14px;
+  }
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .categories {
+
+    li {
+      margin-bottom: 20px;
+    }
+
+    a {
+      font-size: 14px;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        background: $accent;
+        height: 2px;
+        width: 0;
+        left: 0;
+        top: 20px;
+        transition: all 0.2s ease-in-out;
+      }
+
+      @media (min-width: 1024px) {
+
+
+        &:hover {
+          color: $accent;
+
+          &:after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+
+  .bricks {
+    a {
+      display: inline-block;
+      margin: 0 10px 10px 0;
+      padding: 10px 20px;
+      background: $secondary;
+      color: $bright;
+      border: 1px solid $secondary;
+      font-size: 12px;
+      text-transform: uppercase;
+
+      @media (min-width: 1024px) {
+
+        &:hover {
+          border: 1px solid $secondary;
+          background: $bright;
+          color: $secondary;
+        }
+      }
+    }
+  }
+
+
+  .archive {
+
+    ul {
+      height: 200px;
+      overflow-y: scroll;
+    }
+
+    a {
+      font-size: 14px;
+
+      @media (min-width: 1024px) {
+        &:hover {
+          color: $accent;
+        }
+      }
+    }
+  }
+}
