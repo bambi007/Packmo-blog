@@ -938,7 +938,7 @@ footer .container {
 
 .main {
   width: calc(100% - 350px);
-  padding-right: 20px;
+  padding-right: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1117,7 +1117,6 @@ footer .container {
 
 .sidebar {
   width: 350px;
-  padding-left: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
