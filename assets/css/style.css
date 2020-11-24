@@ -1124,9 +1124,6 @@ footer .container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
 }
 
 @media (max-width: 1024px) {
@@ -1145,6 +1142,7 @@ footer .container {
 
 .sidebar .sidebar-part {
   margin-bottom: 30px;
+  width: 100%;
 }
 
 .sidebar h3 {
@@ -1455,6 +1453,328 @@ footer .container {
   }
 }
 
+.article {
+  margin-top: 40px;
+}
+
+.article .article-part {
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.article .paragraph {
+  font-size: 14px;
+}
+
+.article .column-paragraph {
+  font-size: 14px;
+  -webkit-columns: 2;
+          columns: 2;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+}
+
+@media (max-width: 580px) {
+  .article .column-paragraph {
+    -webkit-columns: 1;
+            columns: 1;
+  }
+}
+
+.article .image-paragraph {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media (max-width: 768px) {
+  .article .image-paragraph {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.article .image-paragraph .image {
+  width: 60%;
+  height: 350px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 1400px) {
+  .article .image-paragraph .image {
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .article .image-paragraph .image {
+    width: 100%;
+    height: 350px;
+  }
+}
+
+.article .image-paragraph p {
+  width: 40%;
+  padding: 20px;
+  background: #EBEBEB;
+}
+
+@media (max-width: 768px) {
+  .article .image-paragraph p {
+    width: 100%;
+  }
+}
+
+.article .bullet-list .list-title {
+  display: inline-block;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.article .bullet-list li {
+  list-style: disc !important;
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+
+.article .enumerated-list .list-title {
+  display: inline-block;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.article .enumerated-list li {
+  list-style: decimal !important;
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .article .simple-table {
+    width: 100%;
+    overflow-x: scroll;
+  }
+}
+
+.article .simple-table table {
+  border-collapse: collapse;
+}
+
+@media (max-width: 768px) {
+  .article .simple-table table {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+}
+
+.article .simple-table table tr:nth-child(odd) {
+  background: #EBEBEB;
+}
+
+.article .simple-table table tr:first-child {
+  background: #AD9067;
+}
+
+.article .simple-table table th {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+  text-align: left;
+  color: white;
+}
+
+.article .simple-table table td:nth-child(3n) {
+  background: #00386510;
+}
+
+.article .simple-table table th,
+.article .simple-table table td {
+  padding: 20px 30px;
+  overflow-wrap: normal;
+}
+
+@media (max-width: 768px) {
+  .article .simple-table table th,
+  .article .simple-table table td {
+    max-width: 400px;
+  }
+}
+
+.article .downloads {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.article .downloads .download {
+  margin-top: 20px;
+  padding-right: 30px;
+  width: calc(100% / 4);
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .article .downloads .download {
+    width: calc(100% / 3);
+  }
+}
+
+@media (max-width: 580px) {
+  .article .downloads .download {
+    width: 50%;
+  }
+}
+
+@media (max-width: 425px) {
+  .article .downloads .download {
+    width: 100%;
+  }
+}
+
+.article .downloads .download .file-icon {
+  height: 150px;
+  width: 100%;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCg0KIDxnPg0KICA8dGl0bGU+YmFja2dyb3VuZDwvdGl0bGU+DQogIDxyZWN0IGZpbGw9Im5vbmUiIGlkPSJjYW52YXNfYmFja2dyb3VuZCIgaGVpZ2h0PSIxNTIiIHdpZHRoPSIxNTIiIHk9Ii0xIiB4PSItMSIvPg0KIDwvZz4NCiA8Zz4NCiAgPHRpdGxlPkxheWVyIDE8L3RpdGxlPg0KICA8ZyBzdHJva2U9Im51bGwiIGlkPSJzdmdfMTgiPg0KICAgPHBvbHlnb24gc3Ryb2tlPSJudWxsIiBmaWxsPSIjZWZlZmVmIiBwb2ludHM9Ijk0LjQzODYxMzg5MTYwMTU2LDkuNDQ4OTI4ODMzMDA3ODEyIDMxLjI1NjYyNjEyOTE1MDM5LDkuNDQ4OTI4ODMzMDA3ODEyIDMxLjI1NjYyNjEyOTE1MDM5LDE0MC41NTEwNjczNTIyOTQ5MiAxMjUuMjc0OTU1NzQ5NTExNzIsMTQwLjU1MTA2NzM1MjI5NDkyIDEyNS4yNzQ5NTU3NDk1MTE3Miw0MC4wNzQzODY1OTY2Nzk2OSAiIGlkPSJYTUxJRF8xMTJfIiBjbGFzcz0ic3QwIi8+DQogICA8cG9seWdvbiBzdHJva2U9Im51bGwiIGZpbGw9IiNlNWU1ZTUiIHBvaW50cz0iOTQuNDM4NjEzODkxNjAxNTYsOS42MTcwMDkxNjI5MDI4MzIgMTI1LjI3NDk1NTc0OTUxMTcyLDQwLjI0MjQ2NTk3MjkwMDM5IDk0LjQzODYxMzg5MTYwMTU2LDQwLjI0MjQ2NTk3MjkwMDM5ICIgaWQ9IlhNTElEXzExMV8iIGNsYXNzPSJzdDEiLz4NCiAgIDxyZWN0IHN0cm9rZT0ibnVsbCIgZmlsbD0iI2FkOTA2NyIgeT0iNzEuNDgzMjc4IiB4PSIyNC43MjUwNDQiIHdpZHRoPSI3NC44NzAyNjMiIGlkPSJYTUxJRF8xMTBfIiBoZWlnaHQ9IjU1LjgzNzIyNiIgY2xhc3M9InN0MSIvPg0KICAgPHBvbHlnb24gc3Ryb2tlPSJudWxsIiBmaWxsPSIjN2E2NTQ5IiBwb2ludHM9IjI0LjcyNTA0NDI1MDQ4ODI4LDEyNy4zMjA1MDcwNDk1NjA1NSAzMS4yNTY2MjYxMjkxNTAzOSwxMzIuODc5MjM4MTI4NjYyMSAzMS4yNTY2MjYxMjkxNTAzOSwxMjcuMzIwNTA3MDQ5NTYwNTUgIiBpZD0iWE1MSURfMTA5XyIgY2xhc3M9InN0MiIvPg0KICAgPHBhdGggc3Ryb2tlPSJudWxsIiBpZD0ic3ZnXzYiIGQ9Im00MC41NjYwNDcsMTAxLjAxMDAyNiIgb3BhY2l0eT0iMC41IiBzdHJva2Utb3BhY2l0eT0ibnVsbCIgc3Ryb2tlLXdpZHRoPSJudWxsIiBmaWxsPSIjZmZmZmZmIi8+DQogICA8ZyBzdHJva2U9Im51bGwiIGlkPSJzdmdfMTciPg0KICAgIDxnIHN0cm9rZT0ibnVsbCIgaWQ9InN2Z18xNCI+DQogICAgIDxlbGxpcHNlIHN0cm9rZT0ibnVsbCIgcnk9IjIwLjA1NzYxOSIgcng9IjE5LjkwNjAwNiIgaWQ9InN2Z18xMCIgY3k9IjEwMS40NjQzOTkiIGN4PSI1OS4yMjIyNCIgc3Ryb2tlLW9wYWNpdHk9Im51bGwiIHN0cm9rZS13aWR0aD0ibnVsbCIgZmlsbD0iI2ZmZmZmZiIvPg0KICAgICA8ZWxsaXBzZSBzdHJva2U9Im51bGwiIHJ5PSIxNC43MzA4NDIiIHJ4PSIxNC42MTk0OTQiIGlkPSJzdmdfMTEiIGN5PSIxMDYuOTY1MzU3IiBjeD0iNzguMDg0MTAxIiBzdHJva2Utb3BhY2l0eT0ibnVsbCIgc3Ryb2tlLXdpZHRoPSJudWxsIiBmaWxsPSIjZmZmZmZmIi8+DQogICAgIDxlbGxpcHNlIHN0cm9rZT0ibnVsbCIgcnk9IjExLjc3MTUyMSIgcng9IjExLjY4MjU0MiIgaWQ9InN2Z185IiBjeT0iMTA5Ljg4MjAyIiBjeD0iNDMuMjk5MzAyIiBzdHJva2Utb3BhY2l0eT0ibnVsbCIgc3Ryb2tlLXdpZHRoPSJudWxsIiBmaWxsPSIjZmZmZmZmIi8+DQogICAgIDxyZWN0IHN0cm9rZT0ibnVsbCIgaWQ9InN2Z18xMiIgaGVpZ2h0PSIxMS4zMTExODIiIHdpZHRoPSIzNS4wNzQwNzciIHk9IjExMC4zNDIzNjEiIHg9IjQzLjM2MjciIHN0cm9rZS1vcGFjaXR5PSJudWxsIiBzdHJva2Utd2lkdGg9Im51bGwiIGZpbGw9IiNmZmZmZmYiLz4NCiAgICA8L2c+DQogICAgPGcgc3Ryb2tlPSJudWxsIiBpZD0ic3ZnXzE2Ij4NCiAgICAgPHJlY3Qgc3Ryb2tlPSJudWxsIiB0cmFuc2Zvcm09Im1hdHJpeCgwLDAuMTQ0NjYzODkwMTkyNDc0ODYsLTAuNDA2MjMwNzc0MDY5NDQ3NywwLDE3Mi43ODcxMjEzNTI3MzU5Nyw2MS4zOTU4ODI2MjQxODc4MikgIiBpZD0ic3ZnXzEiIGhlaWdodD0iMzAuMDU3MjI4IiB3aWR0aD0iMjAxLjYwMzM2MiIgeT0iMjU3LjI5Njc2IiB4PSIxMTkuOTE2MjU0IiBzdHJva2Utb3BhY2l0eT0ibnVsbCIgc3Ryb2tlLXdpZHRoPSJudWxsIiBmaWxsPSIjYWQ5MDY3Ii8+DQogICAgIDxwYXRoIHN0cm9rZT0ibnVsbCIgaWQ9InN2Z183IiBkPSJtNjIuNDIwMTk1LDExNC40ODc2NjhsLTE0Ljc4NTY5LC0xNC43MzQ2MTFsMjkuMDUxMzQ3LDAuMTU0MDY2bC0xNC4yNjU2NTcsMTQuNTgwNTQ1eiIgc3Ryb2tlLW9wYWNpdHk9Im51bGwiIHN0cm9rZS13aWR0aD0ibnVsbCIgZmlsbD0iI2FkOTA2NyIvPg0KICAgIDwvZz4NCiAgIDwvZz4NCiAgPC9nPg0KIDwvZz4NCjwvc3ZnPg==");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.article .downloads .download .file-name {
+  width: 70%;
+  overflow-wrap: break-word;
+}
+
+.article .downloads .download .download-button {
+  display: inline-block;
+  background: #003865;
+  color: white;
+  padding: 5px 20px;
+  margin-top: 20px;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+
+.article .downloads .download .download-button:hover {
+  background: #AD9067;
+}
+
+.article .related-products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  border-top: 1px solid #EBEBEB;
+  border-bottom: 1px solid #EBEBEB;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.article .related-products .image {
+  background-image: url(https://packmo.pl/assets/images/02_tasmy_696x408.png);
+  background-position: center center;
+  width: 100%;
+  height: 220px;
+}
+
+.article .related-products .shop-item {
+  position: relative;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: calc(100% / 4 - 15px);
+  margin-right: 20px;
+  margin-bottom: 20px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-box-shadow: 0 2px 5px #3b3b3b50;
+          box-shadow: 0 2px 5px #3b3b3b50;
+}
+
+.article .related-products .shop-item:last-child {
+  margin-right: 0;
+}
+
+.article .related-products .shop-item:hover {
+  background: #AD9067;
+  -webkit-box-shadow: 0 12px 10px #3b3b3b50;
+          box-shadow: 0 12px 10px #3b3b3b50;
+  top: -10px;
+}
+
+@media (max-width: 1200px) {
+  .article .related-products .shop-item {
+    width: calc(50% - 10px);
+  }
+  .article .related-products .shop-item:nth-child(even) {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 580px) {
+  .article .related-products .shop-item {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.article .related-products .item-name {
+  display: inline-block;
+  font-weight: 300;
+  font-size: 14px;
+  margin-bottom: 10px;
+  width: 95%;
+}
+
+.article .related-products .price {
+  margin-bottom: 10px;
+  color: #003865;
+}
+
 @media (max-width: 1024px) {
   .content .container {
     -webkit-box-orient: vertical;
@@ -1490,9 +1810,6 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
