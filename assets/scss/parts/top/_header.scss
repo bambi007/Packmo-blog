@@ -25,6 +25,11 @@ header {
   .logo {
     cursor: pointer;
     width: 200px;
+    background-image: $logo;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center left;
+    height: 60px;
 
     svg {
       width: 100%;
