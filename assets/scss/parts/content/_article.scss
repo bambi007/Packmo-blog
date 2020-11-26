@@ -31,8 +31,12 @@
 
     .image {
       width: 60%;
-      height: 350px;
+      height: 350px !important;
       margin-bottom: 0;
+
+      img {
+        height: 100%;
+      }
 
       @media (max-width: 1400px) {
         height: auto;
@@ -212,11 +216,19 @@
     flex-wrap: wrap;
 
 
-    .image {
-      background-image: url(https://packmo.pl/assets/images/02_tasmy_696x408.png);
-      background-position: center center;
+    .product-image {
       width: 100%;
       height: 220px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.5s;
+      }
     }
 
     .shop-item {

@@ -1522,8 +1522,12 @@ footer .container {
 
 .article .image-paragraph .image {
   width: 60%;
-  height: 350px;
+  height: 350px !important;
   margin-bottom: 0;
+}
+
+.article .image-paragraph .image img {
+  height: 100%;
 }
 
 @media (max-width: 1400px) {
@@ -1722,11 +1726,25 @@ footer .container {
       flex-wrap: wrap;
 }
 
-.article .related-products .image {
-  background-image: url(https://packmo.pl/assets/images/02_tasmy_696x408.png);
-  background-position: center center;
+.article .related-products .product-image {
   width: 100%;
   height: 220px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.article .related-products .product-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .article .related-products .shop-item {
