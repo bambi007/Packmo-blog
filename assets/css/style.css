@@ -459,7 +459,7 @@ header .logo svg {
 
 .newsletter {
   position: relative;
-  background-image: url(https://media.istockphoto.com/photos/duct-tape-on-cardboard-box-picture-id626914142?k=6&m=626914142&s=612x612&w=0&h=E9m32HWQvTiuNgGpAo_idnGH9mczNP6fo2DHi50V8Gc=);
+  background-image: url("../images/cta.jpg");
   background-size: cover;
   background-attachment: fixed;
   padding: 30px 0;
